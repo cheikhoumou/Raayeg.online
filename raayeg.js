@@ -23,20 +23,28 @@ function init() {
                     row[ele] = (rowData.c[ind] != null) ? rowData.c[ind].v : '';
                 })
                 data.push(row);
-                console.log(data)
             })
         })
 }
+
 function LoadData(){
     if (typeof(Storage) !== "undefined") {
       document.getElementById("username").value=localStorage.getItem("userRaayeg");
       document.getElementById("password").value =localStorage.getItem("passRaayeg");
+      document.getElementById("course").value =localStorage.getItem("course1");
+    }
+    if(username!="" && password!=""){
+      for(var i = 0; i < data.length; i++)  {
+      if(data[i].usarname == username ){return}
+      }
+      localStorage.clear
     }
   }
   
   function LoginUser()  {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+    var course =document.getElementById("course").value
       if(username!="" && password!=""){
       for(var i = 0; i < data.length; i++)  {
       if(data[i].usarname == username && 
@@ -44,6 +52,7 @@ function LoadData(){
           if (typeof(Storage) !== "undefined") {
             localStorage.setItem("userRaayeg", username);
             localStorage.setItem("passRaayeg", password);
+            localStorage.setItem("course1", course);
           }
           document.getElementById("displayusername").innerHTML = username;
           document.getElementById("page1_id1").className = "page1_class1-off";
@@ -59,6 +68,3 @@ function LoadData(){
   document.getElementById("page3_id1").className = "page3_id1-off";
   document.getElementById("page1_id1").className = "page1_id1"; 
   }
-
-
- 
