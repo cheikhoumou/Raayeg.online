@@ -26,7 +26,17 @@ function init() {
             })
         })
 }
-
+function LoadData1(){
+  init()
+  var username = document.getElementById("usernamee").value;
+  var password = document.getElementById("passwordd").value;
+  var course =document.getElementById("course").value
+  if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("userRaayeg", username);
+    localStorage.setItem("passRaayeg", password);
+    localStorage.setItem("course1", course);
+  }
+}
 function LoadData(){
     if (typeof(Storage) !== "undefined") {
       document.getElementById("username").value=localStorage.getItem("userRaayeg");
@@ -44,7 +54,6 @@ function LoadData(){
   function LoginUser()  {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    var course =document.getElementById("course").value
       if(username!="" && password!=""){
       for(var i = 0; i < data.length; i++)  {
       if(data[i].usarname == username && 
@@ -52,14 +61,14 @@ function LoadData(){
           if (typeof(Storage) !== "undefined") {
             localStorage.setItem("userRaayeg", username);
             localStorage.setItem("passRaayeg", password);
-            localStorage.setItem("course1", course);
           }
           document.getElementById("displayusername").innerHTML = username;
           document.getElementById("page1_id1").className = "page1_class1-off";
           document.getElementById("page4_id1").className = "page4_id1";  
           return
         }else {
-        document.getElementById("errorMessage").innerHTML = " البيانات غير متطابقة اذا لم يكن لديك حساب تواصل معنا "; 
+        document.getElementById("errorMessage").innerHTML = " البيانات غير متطابقة اذا لم يكن لديك حساب تواصل معنا ";
+        localStorage.clear 
         }
       }
     }    
