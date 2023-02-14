@@ -26,17 +26,7 @@ function init() {
             })
         })
 }
-function LoadData1(){
-  init()
-  var username = document.getElementById("usernamee").value;
-  var password = document.getElementById("passwordd").value;
-  var course =document.getElementById("course").value
-  if (typeof(Storage) !== "undefined") {
-    localStorage.setItem("userRaayeg", username);
-    localStorage.setItem("passRaayeg", password);
-    localStorage.setItem("course1", course);
-  }
-}
+
 function LoadData(){
     if (typeof(Storage) !== "undefined") {
       document.getElementById("username").value=localStorage.getItem("userRaayeg");
@@ -72,8 +62,12 @@ function LoadData(){
         }
       }
     }    
-  }    
+  }  
+   
   function function3(){ 
-  document.getElementById("page3_id1").className = "page3_id1-off";
-  document.getElementById("page1_id1").className = "page1_id1"; 
+    document.getElementById("page3_id1").className = "page3_id1-off";
+    document.getElementById("page1_id1").className = "page1_id1"; 
   }
+
+
+ 
