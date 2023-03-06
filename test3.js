@@ -31,7 +31,6 @@ function LoadData(){
     if (typeof(Storage) !== "undefined") {
       document.getElementById("username").value=localStorage.getItem("userRaayeg");
       document.getElementById("password").value =localStorage.getItem("passRaayeg");
-      document.getElementById("course").value =localStorage.getItem("course1");
       // test code
       if(document.getElementById("username").value == localStorage.getItem("userRaayeg") &&
     document.getElementById("password").value == localStorage.getItem("passRaayeg")){
