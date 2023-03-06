@@ -35,9 +35,13 @@ function LoadData(){
       // test code
       if(document.getElementById("username").value == localStorage.getItem("userRaayeg") &&
     document.getElementById("password").value == localStorage.getItem("passRaayeg")){
+    function butadd(){
     document.querySelector("#page1_id1 > input[type=button]:nth-child(6)").click();
     document.querySelector('input.log').click();
+    }
+    setTimeout(butadd, 3000);
 }
+     // test code
     }
     if(username!="" && password!=""){
       for(var i = 0; i < cheikhoRaayeg1.length; i++)  {
