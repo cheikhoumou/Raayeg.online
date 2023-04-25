@@ -1,4 +1,4 @@
-const sheetId = '1M_0LEbTU45V2E7YwWVo8MqipX0u9Z6HJSkwN1Jvd8Wg';
+let sheetId = '1M_0LEbTU45V2E7YwWVo8MqipX0u9Z6HJSkwN1Jvd8Wg';
 const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
 const sheetName = 'DATA';
 const query = encodeURIComponent('Select *')
